@@ -201,3 +201,17 @@
 .modal-buttons button.cancel:hover {
     background-color: #a71d2a;
 }
+.modal-buttons-err {
+    display: flex;
+    justify-content: center; /* Căn giữa chỉ một nút OK */
+    margin-top: 20px;
+  }
+  
+  .modal-buttons-err button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
