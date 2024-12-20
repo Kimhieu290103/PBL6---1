@@ -1,0 +1,267 @@
+.payment-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+.payment-page-container {
+    max-width: 1000px;
+    margin: 20px auto 0;
+}
+
+.payment-page__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.payment-page__header__back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+/* Row */
+
+.payment-page__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.payment-page-row__info-character {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.payment-page__info-character__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+}
+
+.payment-page__info-character__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.payment-page__info-character__name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.payment-page-row__line-separate {
+    margin: 0 20px;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.payment-page-row__price {
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Payment */
+.payment-page__content__title {
+    /* margin-top: 40px; */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.payment-page__content__methods {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.payment-page__content__methods__item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: 1px solid #ececec;
+    background-color: #fff;
+    transition: all 0.2s;
+}
+
+.payment-page__content__methods__item img {
+    width: 148px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.payment-page__content__methods__item:hover {
+    border: 1px solid #000;
+    border-radius: 5%;
+    border-color: #007bff;
+    background-color: #f0f8ff;
+}
+
+.payment-page__content__methods__item.active {
+    border: 1px solid #000;
+    border-radius: 5%;
+    border-color: #007bff;
+    background-color: #f0f8ff;
+}
+.payment-page__center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Tùy chỉnh khoảng cách phía trên */
+    margin-left: 900px;
+}
+
+.payment-page__center-button__btn {
+    padding: 10px 20px;
+    background-color: #45a049;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.payment-page__center-button__btn:hover {
+    background-color: #2d8731;
+}
+.payment-page__content {
+    margin-top: 150px; /* Tùy chỉnh khoảng cách phía trên */
+}
+.product-image {
+    margin-left: 5px;
+    width: 23px; /* Kích thước ảnh */
+    height: 23px; /* Kích thước ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+  }
+  .payment-page__pricing {
+    margin-top: 20px;
+}
+.payment-packages {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.payment-package {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.payment-package.selected {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+}
+.payment-button {
+    margin-left: 85%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #45a049;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.payment-button:hover {
+    background-color: #2d8731;
+}
+/* Bảng thông báo */
+.payment-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Chi tiết thông tin thanh toán */
+.payment-details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Quan trọng để căn chỉnh nút đóng ở phía trên bên phải */
+}
+
+.payment-details h2 {
+    margin-bottom: 20px;
+}
+
+.payment-details p {
+    margin: 10px 0;
+}
+
+.qr-code {
+    margin-top: 20px;
+}
+
+/* Nút đóng bảng thông báo, căn ở góc trên bên phải */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background-color: #45a049;
+}
+
+/* Nút Nạp tiền */
+.payment-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.payment-button:hover {
+    background-color: #0056b3;
+}
+
+/* Thu nhỏ hình ảnh QR */
+.qr-code img {
+    width: 300px; /* Đặt chiều rộng cho hình ảnh */
+    height: auto; /* Giữ tỉ lệ cho hình ảnh */
+    margin: 10px 0;
+}

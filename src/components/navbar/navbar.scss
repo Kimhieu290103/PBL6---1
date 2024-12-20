@@ -1,0 +1,108 @@
+@import "../../style.scss";
+
+.navbar {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 40px;
+    border-bottom: 1px solid themed("border");
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color: themed("textColor");
+    z-index: 999;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      span {
+        font-weight: bold;
+        font-size: 20px;
+        color: themed("logo");
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid themed("border");
+        border-radius: 5px;
+        padding: 5px;
+
+        input {
+          border: none;
+          width: 500px;
+          background-color: transparent;
+          color: themed("textColor");
+
+          @include mobile {
+            display: none;
+          }
+
+          @include tablet {
+            width: 200px;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include mobile {
+        display: none;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        position: relative; // Để định vị dropdown
+
+        @include tablet {
+          display: none;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        span {
+          // Có thể thêm định dạng cho tên người dùng
+        }
+
+        .dropdown {
+          position: absolute; // Định vị dropdown tuyệt đối
+          top: 120%; // Xuống dưới người dùng (tăng khoảng cách xuống)
+          right: 0; // Căn phải
+          background-color: themed("bg"); // Nền dropdown
+          border: 1px solid themed("border"); // Viền
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Đổ bóng
+          z-index: 1000; // Đặt trên các phần tử khác
+          display: flex;
+          flex-direction: column; // Cột cho các mục dropdown
+          padding: 10px;
+          width: 200px; // Đặt chiều rộng của dropdown (có thể điều chỉnh theo nhu cầu)
+          div {
+            padding: 8px 12px; // Padding cho mỗi mục
+            cursor: pointer; // Con trỏ khi hover
+            &:hover {
+              background-color: #f0f0f0; // Đổi màu khi hover
+              color: black  ;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.register {
+  height: 100vh;
+  background:url("../../assets/images/Background.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+
+    .left {
+      flex: 1;
+      background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+        url("https://vannghetiengiang.vn/uploads/news/2012_10/le-van-duyet.jpg")
+          center;
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+      h1 {
+        font-size: 45px;
+        line-height: 100px;
+      }
+      
+      p {
+      }
+
+      span {
+        font-size: 14px;
+      }
+      
+      button {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: white;
+        color: rebeccapurple;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+
+      h1 {
+      color: #555;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        
+        input {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        padding: 20px 10px;
+        }
+        
+        button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: #938eef;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;  /* Canh giữa theo chiều ngang */
+    align-items: center;      /* Canh giữa theo chiều dọc */
+    z-index: 9999;            /* Đảm bảo modal nằm trên tất cả các phần khác */
+  }
+
+  .modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;  /* Đặt chiều rộng modal */
+    height: 50vh;  /* Chiều cao modal bằng 50% chiều cao màn hình */
+    display: flex;
+    flex-direction: column;  /* Để các thành phần nằm dọc */
+    justify-content: center; /* Canh các thành phần ở giữa theo chiều dọc */
+    align-items: center;     /* Canh các thành phần ở giữa theo chiều ngang */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10000;
+  }
+
+  .modal h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: green;
+  }
+
+  .modal p {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+
+  .modal button {
+    padding: 10px 20px;
+    background-color: #938eef;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #7a79d4;
+    }
+  }
+}
