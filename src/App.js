@@ -38,9 +38,9 @@ function App() {
   };
 
   const ProtectedRoute = ({ children }) => {
-    // if (!currentUser) {
-    //  return <Navigate to="/login"/>;
-    // }
+    if (!currentUser) {
+     return <Navigate to="/login"/>;
+    }
 
     return children;
   };
@@ -65,10 +65,6 @@ function App() {
         {
           path: "/payment/:id", // Nếu không cần, có thể xóa dòng này
           element: <PaymentPage />,
-        },
-        {
-          path: "/register", // Nếu không cần, có thể xóa dòng này
-          element: <Register />,
         },
         {
           path: "/update", // Nếu không cần, có thể xóa dòng này
