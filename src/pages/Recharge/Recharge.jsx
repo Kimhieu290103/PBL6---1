@@ -141,14 +141,14 @@ const Recharge = () => {
                     setIsSuccess(true); // Cập nhật isSuccess thành true
                     clearInterval(intervalId); // Dừng việc gọi API sau khi đạt yêu cầu
                     console.log("Đã tìm thấy dữ liệu khớp!");
-                    // const balanceResponse = await axios.put(
-                    //     `${config.API_BASE_URL}/api/v1/auth/balance`,
-                    //     {
-                    //         email: `${currentUser.user.email}`,
-                    //         amount: selectedPackage.price
-                    //     }
-                    // );
-                    // console.log("Kết quả gọi API thứ hai:", balanceResponse.data);
+                    const balanceResponse = await axios.put(
+                        `${config.API_BASE_URL}/api/v1/auth/balance`,
+                        {
+                            email: `${currentUser.user.email}`,
+                            amount: selectedPackage.price
+                        }
+                    );
+                    console.log("Kết quả gọi API thứ hai:", balanceResponse.data);
                     setIsVisible(false)
                     setDone(true)
                 }

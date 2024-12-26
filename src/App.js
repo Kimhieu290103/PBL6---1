@@ -4,6 +4,7 @@ import Chat from "./pages/DaiVietChat/DaiVietChat";
 import CharacterSelection from "./pages/CharacterSelection/CharacterSelection";
 import PaymentPage from "./pages/PaymentPage/PaymentPage"
 import ChangePass from "./pages/ChangePass/ChangePass"
+import UpdateProfile from "./pages/UpdateProfile/UpdateProfile"
 import Recharge from "./pages/Recharge/Recharge"
 import {
   createBrowserRouter,
@@ -37,9 +38,9 @@ function App() {
   };
 
   const ProtectedRoute = ({ children }) => {
-    if (!currentUser) {
-     return <Navigate to="/login"/>;
-    }
+    // if (!currentUser) {
+    //  return <Navigate to="/login"/>;
+    // }
 
     return children;
   };
@@ -66,9 +67,13 @@ function App() {
           element: <PaymentPage />,
         },
         {
-          path: "/recharge", // Nếu không cần, có thể xóa dòng này
-          element: <Recharge />,
+          path: "/register", // Nếu không cần, có thể xóa dòng này
+          element: <Register />,
         },
+        {
+          path: "/update", // Nếu không cần, có thể xóa dòng này
+          element: <UpdateProfile />,
+        }
       ],
     },
     {

@@ -1,5 +1,5 @@
 const config = {
-    API_BASE_URL: "http://daivietnhanvat.site:8000"
+    API_BASE_URL: "https://c9b2-1-54-4-119.ngrok-free.app"
 };
 
 export default config;

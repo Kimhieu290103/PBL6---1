@@ -106,6 +106,9 @@ const handleChangePassword = () => {
 const handleChangeRecharge = () => {
   navigate("/recharge");
 };
+const handleUpdate = () => {
+  navigate("/update");
+};
 const handeLogout = () => {
    logout(); // Xóa thông tin người dùng
     navigate("/login"); // Chuyển hướng về trang login
@@ -149,7 +152,7 @@ console.log({currentUser})
     }} style={{ cursor: "pointer", marginLeft: '8px' }} /> {/* Nút biểu tượng menu */}
           {dropdownOpen && (
             <div ref={dropdownRef} className="dropdown">
-              <div onClick={handleUpdateUser}>Update user</div>
+              <div onClick={handleUpdate}>Update user</div>
               <div onClick={handleChangePassword}>Change password</div>
               <div onClick={handleChangeRecharge}>Recharge</div>
               <div onClick={handeLogout}>Log out</div>

@@ -16,7 +16,7 @@ const serverUrl = "http://localhost:3005";
 const CharacterSelection = () => {
     const user = JSON.parse(localStorage.getItem("user"));
      const [characters, setCharacters] = useState([]);
-    const [selectedCharacter, setSelectedCharacter] = useState({ id: 1 });
+    const [selectedCharacter, setSelectedCharacter] = useState({ id: 28 });
     const navigate = useNavigate();
     const currentUser = JSON.parse(localStorage.getItem("user"));
     useEffect(() => {
@@ -45,9 +45,9 @@ const CharacterSelection = () => {
                 const data = await response.json();
                 if (data.length > 0) {
                     setSelectedCharacter(data[0]);
+                    
                 }
                 setCharacters(data);
-                console.log("kiểm tra gia trị"+ characters["characters"])
             } catch (error) {
                 console.log("error", error);
             }
