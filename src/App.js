@@ -73,6 +73,10 @@ function App() {
         {
           path: "/update", // Nếu không cần, có thể xóa dòng này
           element: <UpdateProfile />,
+        },
+        {
+          path: "/recharge", // Nếu không cần, có thể xóa dòng này
+          element: <Recharge />,
         }
       ],
     },

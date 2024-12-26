@@ -16,7 +16,7 @@ const serverUrl = "http://localhost:3005";
 const CharacterSelection = () => {
     const user = JSON.parse(localStorage.getItem("user"));
      const [characters, setCharacters] = useState([]);
-    const [selectedCharacter, setSelectedCharacter] = useState({ id: 28 });
+    const [selectedCharacter, setSelectedCharacter] = useState("");
     const navigate = useNavigate();
     const currentUser = JSON.parse(localStorage.getItem("user"));
     useEffect(() => {
@@ -73,7 +73,7 @@ const CharacterSelection = () => {
     return (
         <div className="characterSelection">
             {
-                 characters["characters"] && characters["characters"].map((character, index) => (
+                  selectedCharacter ? ( characters["characters"] && characters["characters"].map((character, index) => (
                     <img key={index} src={character.profile_image}
                    
                         className={
@@ -82,6 +82,12 @@ const CharacterSelection = () => {
                         alt="background"
                     />
                 ))
+            ) : (
+                <div
+                className="characterSelection-background"
+                
+            ></div>
+        )
             }
             {
                  characters["characters"] && characters["characters"].map((character, index) => (
@@ -98,7 +104,7 @@ const CharacterSelection = () => {
                                     <button className="characterSelection-action-button" onClick={() => {
                                     
                                         handleSelectCharater(character)}}>
-                                        <FontAwesomeIcon icon={faComment} />
+                                        <FontAwesomeIcon icon={faComment} className="characterSelection-action-button-icon" />
                                     </button>
                                 </div>
                             ): (
@@ -106,7 +112,7 @@ const CharacterSelection = () => {
                                     <button className="characterSelection-action-button" onClick={() => handleShoppingCharacter(character)}
                               
                                 >
-                                        <FontAwesomeIcon icon={faCartShopping} />
+                                        <FontAwesomeIcon icon={faCartShopping} className="characterSelection-action-button-icon" />
                                     </button>
                                 </div>
                             )

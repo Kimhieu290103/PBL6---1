@@ -68,7 +68,11 @@ const Navbar = () => {
     };
 
     fetchUserData();
-    
+     // Cập nhật liên tục sau mỗi 5 giây
+  const interval = setInterval(fetchUserData, 1000);
+
+  // Dọn dẹp khi component unmount
+  return () => clearInterval(interval);
   }, []);
   
   // const handleLogout = async () => {
@@ -145,7 +149,7 @@ console.log({currentUser})
             src = {user_image}
             alt=""
           />
-          <span>User</span>
+          <span>{currentUser.user.name}</span>
           <MenuIcon onClick={(e) => {
       e.stopPropagation(); // Ngừng sự kiện bubbling để dropdown không bị đóng
       toggleDropdown(); // Mở dropdown

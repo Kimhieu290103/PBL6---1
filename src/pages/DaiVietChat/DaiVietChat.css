@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     width: 650px;
-    height: 600px;
+    height: 80vh;
     background-color: #343541;
     border-radius: 10px;
     overflow: hidden;

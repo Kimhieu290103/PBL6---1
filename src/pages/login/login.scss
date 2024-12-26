@@ -16,7 +16,7 @@
     .left {
       flex: 1;
       background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
-        url("https://hueprivatecars.com/wp-content/uploads/2016/09/viet-nam-history-hue-travel-guide-thing-to-do-in-hue.jpg")
+        url("../../assets//BGlogin.jpg")
           center;
       background-size: cover;
       padding: 50px;
@@ -45,6 +45,12 @@
         color: rebeccapurple;
         font-weight: bold;
         cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover {
+        background-color: rebeccapurple;
+        color: white;
+        transform: scale(1.05); /* Tăng kích thước button khi hover */
       }
     }
 
@@ -69,6 +75,13 @@
         border: none;
         border-bottom: 1px solid lightgray;
         padding: 20px 10px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        }
+        input:focus {
+          border-color: rebeccapurple; /* Đổi màu đường viền khi focus */
+          outline: none; /* Loại bỏ outline mặc định */
+          box-shadow: 0 0 5px rgba(147, 142, 239, 0.5); /* Tạo bóng mờ xung quanh input */
         }
         
         button {
@@ -79,6 +92,11 @@
           color: white;
           font-weight: bold;
           cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        button:hover {
+          background-color: rebeccapurple; /* Màu nền đậm hơn khi hover */
+          transform: scale(1.05); /* Tăng kích thước button khi hover */
         }
       }
     }

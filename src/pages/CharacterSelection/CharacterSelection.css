@@ -17,9 +17,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    opacity: 0.5;
+    z-index: 5;
+    opacity: 1;
     transition: opacity 0.6s ease;
+    background-image: url("../../assets/daivieet.jpg");
+; /* Đường dẫn đến hình ảnh mặc định */
+    background-size: cover; /* Hình ảnh bao phủ toàn bộ phần tử */
+    background-position: center; /* Đặt hình ảnh ở giữa */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
 }
 
 .characterSelection-background__selected {
@@ -104,6 +109,7 @@ body {
     margin: 20px 0 40px;
     padding: 20px;
     overflow-y: auto;
+    max-height: 70vh;
 }
 
 /* width */
@@ -182,4 +188,24 @@ body {
 
 .characterSelection-item__selected .characterSelection-item-locked {
     scale: 1.5;
+}
+/* Hiệu ứng hover cho các nút hành động */
+.characterSelection-action-button:hover {
+    background-color: #938eef;  /* Thay đổi màu nền khi hover */
+    color: white;  /* Thay đổi màu chữ khi hover */
+    transform: scale(1.1);  /* Tăng kích thước của nút khi hover */
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+.characterSelection-action-button:hover .characterSelection-action-button-icon {
+    color: #fff; /* Thay đổi màu của icon khi hover */
+    transform: scale(1.2); /* Tăng kích thước của icon khi hover */
+    transition: all 0.3s ease; /* Thêm hiệu ứng mượt mà */
+}
+
+/* Hiệu ứng hover cho icon khóa */
+.characterSelection-item-locked-icon:hover {
+    color: #f00; /* Thay đổi màu của icon khóa khi hover */
+    transform: scale(1.2); /* Tăng kích thước của icon khóa khi hover */
+    transition: all 0.3s ease; /* Thêm hiệu ứng mượt mà */
 }

@@ -123,6 +123,9 @@ const PaymentPage = () => {
             setShowError(true);
         }
     };
+    const handleRecharge=()=>{
+        navigate('/recharge')
+    }
     const handleClose = () => {
         setShowError(false);
     };
@@ -186,7 +189,7 @@ const PaymentPage = () => {
                     <div className="payment-page__content__methods">
                         {paymentMethods.map(method => (
                             <div key={method.id} className={paymentMethod === method.id ? "payment-page__content__methods__item active" : "payment-page__content__methods__item"}
-                                onClick={() => setPaymentMethod(method.id)}
+                                onClick={handleRecharge}
                             >
                                 <img src={method.img} alt={method.name} />
                             </div>
